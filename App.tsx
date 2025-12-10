@@ -37,25 +37,20 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="https://via.placeholder.com/50x50/1e3a8a/ffffff?text=BPCC" alt="BPCC Logo" className="h-10 w-auto" />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-blue-900 leading-none tracking-tight">BPCC</span>
-                <span className="text-[10px] text-red-600 font-semibold uppercase tracking-wider">Cámara de Comercio Peruano Británica</span>
-              </div>
+            <Link to="/">
+              <img src="/BPCC_logo.jpg" alt="BPCC Logo" className="h-16 w-auto" />
             </Link>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  isActive(link.path) 
-                    ? 'text-red-600 border-b-2 border-red-600 py-1' 
-                    : 'text-gray-700 hover:text-blue-900'
-                }`}
+                className={`text-sm font-medium transition-colors duration-200 ${isActive(link.path)
+                  ? 'text-red-600 border-b-2 border-red-600 py-1'
+                  : 'text-gray-700 hover:text-blue-900'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -79,9 +74,8 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                   isActive(link.path) ? 'text-red-600 bg-red-50' : 'text-gray-700 hover:text-blue-900 hover:bg-gray-50'
-                }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive(link.path) ? 'text-red-600 bg-red-50' : 'text-gray-700 hover:text-blue-900 hover:bg-gray-50'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -107,7 +101,7 @@ const Footer: React.FC = () => {
               <p>www.bpcc.com</p>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-bold mb-4">Links</h3>
             <div className="space-y-2 text-slate-300 text-sm flex flex-col">
@@ -130,13 +124,13 @@ const Footer: React.FC = () => {
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-               <span className="text-3xl font-bold text-white tracking-tighter">BPCC</span>
-               <div className="h-8 w-px bg-slate-600"></div>
-               <p className="text-xs text-slate-400 max-w-[150px]">Cámara de Comercio Peruano Británica</p>
+              <span className="text-3xl font-bold text-white tracking-tighter">BPCC</span>
+              <div className="h-8 w-px bg-slate-600"></div>
+              <p className="text-xs text-slate-400 max-w-[150px]">Cámara de Comercio Peruano Británica</p>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
           <p>© 2024 BPCC Comercio Peruano Británico. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
